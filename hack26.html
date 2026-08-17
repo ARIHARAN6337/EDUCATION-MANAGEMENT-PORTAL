@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphax Institute of Technology - Home, Courses, Portal & Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-[#800000] text-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="bg-white text-[#800000] font-black px-3 py-2 rounded-xl text-sm shadow-md border-2 border-amber-400 flex items-center justify-center tracking-tighter">
+                    AIT
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-wider">Alphax Institute of Technology</h1>
+                    <p class="text-xs text-red-200">An Autonomous Institution, Coimbatore</p>
+                </div>
+            </div>
+            <nav class="hidden lg:flex space-x-6 text-sm font-medium items-center">
+                <a href="#" class="hover:text-red-200">Home</a>
+                <a href="#announcements" class="hover:text-red-200">Announcements</a>
+                <a href="#featured" class="hover:text-red-200">Featured</a>
+                <a href="#teachers" class="hover:text-red-200">Top Faculty</a>
+                <a href="#aiTips" class="hover:text-red-200">AI Study Tips</a>
+                <button onclick="openContactModal()" class="hover:text-red-200 bg-transparent border border-red-300 px-3 py-1 rounded-lg text-xs font-semibold transition">Contact Info</button>
+                <button onclick="openCatalogPage()" class="bg-white text-[#800000] px-3 py-1.5 rounded-lg font-semibold hover:bg-red-100 transition shadow text-xs">Course Catalog</button>
+                <button onclick="openAuthPage()" class="bg-amber-400 text-slate-900 px-4 py-2 rounded-lg font-bold hover:bg-amber-300 transition shadow text-xs flex items-center space-x-1">
+                    <span>🔒 Student / Staff / Admin Login</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= 1. HOME & BANNER SECTION ================= -->
+    <section class="bg-gradient-to-r from-[#800000] to-red-900 text-white py-28 px-6 text-center shadow-inner">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Shape Your Future with Excellence at Alphax Institute</h1>
+            <p class="text-red-100 text-lg max-w-2xl mx-auto">Empowering next-gen engineers with world-class curriculum, high-tech labs, and AI-driven skill training.</p>
+            <div class="pt-4 flex justify-center space-x-4">
+                <button onclick="openCatalogPage()" class="bg-white text-[#800000] font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-red-50 transition transform hover:-translate-y-1 text-base">
+                    View Course Catalog →
+                </button>
+                <button onclick="openAuthPage()" class="bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-amber-300 transition transform hover:-translate-y-1 text-base">
+                    Portal Login
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 2. COLLEGE ANNOUNCEMENTS ================= -->
+    <section id="announcements" class="max-w-7xl mx-auto px-6 py-8">
+        <div class="bg-white border-l-4 border-[#800000] p-6 rounded-r-2xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div>
+                <span class="text-xs font-bold bg-red-100 text-[#800000] px-2.5 py-1 rounded">Live Ticker</span>
+                <h3 class="font-bold text-slate-900 text-lg mt-1">📢 Latest College Announcements & Notifications</h3>
+                <p class="text-sm text-slate-600">Semester exam schedules and placement training registration details for all UG/PG departments have been published.</p>
+            </div>
+            <button onclick="alert('Viewing all notices & circulars.')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg transition whitespace-nowrap">View All Circulars</button>
+        </div>
+    </section>
+
+    <!-- ================= 3. FEATURED COURSES ================= -->
+    <section id="featured" class="max-w-7xl mx-auto px-6 py-10">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-extrabold text-[#800000]">Featured Engineering Programs</h2>
+            <p class="text-slate-600 text-sm mt-1">High-demand core and technology programs designed for modern industry roles.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
+                <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80')"></div>
+                <div class="p-5">
+                    <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">CSE Specialization</span>
+                    <h3 class="font-bold text-slate-900 text-base mt-2">Computer Science & Engineering</h3>
+                    <p class="text-xs text-slate-500 mt-1">Software systems, algorithms, cloud computing, and full-stack development.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
+                <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80')"></div>
+                <div class="p-5">
+                    <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">CSE Specialization</span>
+                    <h3 class="font-bold text-slate-900 text-base mt-2">Artificial Intelligence & Data Science</h3>
+                    <p class="text-xs text-slate-500 mt-1">Advanced machine learning models, big data analytics, and predictive data systems.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
+                <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80')"></div>
+                <div class="p-5">
+                    <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">CSE Specialization</span>
+                    <h3 class="font-bold text-slate-900 text-base mt-2">Cyber Security</h3>
+                    <p class="text-xs text-slate-500 mt-1">Ethical hacking, cryptography, network threat defense, and cyber forensics.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
+                <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=80')"></div>
+                <div class="p-5">
+                    <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">Core Engineering</span>
+                    <h3 class="font-bold text-slate-900 text-base mt-2">Electronics & Communication (ECE)</h3>
+                    <p class="text-xs text-slate-500 mt-1">VLSI chip design, embedded IoT networks, and wireless telecommunications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 4. TOP TEACHERS ================= -->
+    <section id="teachers" class="max-w-7xl mx-auto px-6 py-10 bg-white rounded-3xl shadow-sm border border-slate-200 my-8">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-extrabold text-[#800000]">Meet Our Top Faculty</h2>
+            <p class="text-slate-600 text-sm mt-1">Experienced professors driving academic excellence and student mentorship.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 bg-slate-50 rounded-2xl text-center border border-slate-100">
+                <div class="w-20 h-20 bg-red-100 text-[#800000] font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">DR</div>
+                <h3 class="font-bold text-slate-900 text-base">Dr. R. Ananthan</h3>
+                <p class="text-xs text-[#800000] font-semibold mt-1">Professor & Head - CSE</p>
+                <p class="text-xs text-slate-500 mt-2">Expert in Distributed Systems & Cloud Security with 18+ years of research.</p>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-2xl text-center border border-slate-100">
+                <div class="w-20 h-20 bg-red-100 text-[#800000] font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">DR</div>
+                <h3 class="font-bold text-slate-900 text-base">Dr. S. Kanimozhi</h3>
+                <p class="text-xs text-[#800000] font-semibold mt-1">Professor - ECE</p>
+                <p class="text-xs text-slate-500 mt-2">Specialist in VLSI Design & Semiconductor Device Fabrication.</p>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-2xl text-center border border-slate-100">
+                <div class="w-20 h-20 bg-red-100 text-[#800000] font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">DR</div>
+                <h3 class="font-bold text-slate-900 text-base">Dr. K. Vijayakumar</h3>
+                <p class="text-xs text-[#800000] font-semibold mt-1">Professor - Mechatronics</p>
+                <p class="text-xs text-slate-500 mt-2">Pioneering research in Industrial Robotics and Automation controls.</p>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-2xl text-center border border-slate-100">
+                <div class="w-20 h-20 bg-red-100 text-[#800000] font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">DR</div>
+                <h3 class="font-bold text-slate-900 text-base">Dr. M. Priyadarshini</h3>
+                <p class="text-xs text-[#800000] font-semibold mt-1">Professor - Biotechnology</p>
+                <p class="text-xs text-slate-500 mt-2">Leading genetic engineering and medical bioinformatics labs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 5. AI STUDY TIPS ================= -->
+    <section id="aiTips" class="max-w-7xl mx-auto px-6 py-10 mb-12">
+        <div class="bg-gradient-to-br from-purple-900 to-indigo-900 text-white p-8 md:p-12 rounded-3xl shadow-xl">
+            <div class="max-w-3xl mb-8">
+                <span class="bg-purple-500/30 text-purple-200 text-xs font-bold px-3 py-1 rounded-full uppercase">AI Study Guidance</span>
+                <h2 class="text-3xl font-extrabold mt-3">AI Study Tips & Recommended Elite Tracks</h2>
+                <p class="text-purple-200 text-sm mt-2">Our AI evaluation system maps out high-impact engineering disciplines based on global employment metrics.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/10 backdrop-blur p-5 rounded-2xl border border-white/15">
+                    <span class="text-xs text-purple-300 font-semibold">Track 01</span>
+                    <h3 class="font-bold text-lg mt-1">ECE & Embedded IoT</h3>
+                    <p class="text-xs text-purple-200 mt-2">Smart hardware systems integrated with real-time sensor cloud pipelines.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-5 rounded-2xl border border-white/15">
+                    <span class="text-xs text-purple-300 font-semibold">Track 02</span>
+                    <h3 class="font-bold text-lg mt-1">B.Tech IT</h3>
+                    <p class="text-xs text-purple-200 mt-2">Enterprise applications and modern web development methodologies.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-5 rounded-2xl border border-white/15">
+                    <span class="text-xs text-purple-300 font-semibold">Track 03</span>
+                    <h3 class="font-bold text-lg mt-1">Biomedical Engineering</h3>
+                    <p class="text-xs text-purple-200 mt-2">Advanced medical imaging diagnostics and bio-instrumentation design.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-5 rounded-2xl border border-white/15">
+                    <span class="text-xs text-purple-300 font-semibold">Track 04</span>
+                    <h3 class="font-bold text-lg mt-1">Mechatronics Engineering</h3>
+                    <p class="text-xs text-purple-200 mt-2">Synergy of robotics, automation controls, and mechanical machinery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= COURSE CATALOG MODAL / PAGE ================= -->
+    <div id="catalogPage" class="fixed inset-0 bg-slate-50 z-50 hidden overflow-y-auto">
+        <header class="bg-[#800000] text-white shadow-md sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white text-[#800000] font-black px-3 py-2 rounded-xl text-sm shadow border border-amber-400">AIT</div>
+                    <div>
+                        <h1 class="text-lg font-bold tracking-wider">Alphax Institute of Technology</h1>
+                        <p class="text-xs text-red-200">Official Comprehensive Course Catalog (UG & PG)</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button onclick="openCatalogAIEngine()" class="bg-amber-400 text-slate-900 px-4 py-2 rounded-xl font-bold hover:bg-amber-300 transition shadow text-xs flex items-center space-x-1">
+                        <span>🤖 AI Engine</span>
+                    </button>
+                    <button onclick="closeCatalogPage()" class="bg-white text-[#800000] px-5 py-2 rounded-xl font-bold hover:bg-red-50 transition shadow text-xs">
+                        ← Back to Home
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Catalog AI Engine Sub-view / Section -->
+        <div id="catalogAIEngineSection" class="hidden max-w-7xl mx-auto px-6 py-10 space-y-6">
+            <div class="flex justify-between items-center bg-gradient-to-r from-purple-900 to-indigo-900 text-white p-6 rounded-3xl shadow-lg">
+                <div>
+                    <span class="bg-purple-500/30 text-purple-200 text-xs font-bold px-3 py-1 rounded-full uppercase">Catalog Module</span>
+                    <h2 class="text-2xl font-extrabold mt-2">AI Engine Dashboard</h2>
+                    <p class="text-purple-200 text-sm mt-1">Advanced institutional analytics and machine learning insights for course catalogs.</p>
+                </div>
+                <button onclick="backToCatalogMain()" class="bg-white text-purple-900 px-4 py-2 rounded-xl font-bold hover:bg-purple-50 transition shadow text-xs">← Back to Catalog</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div onclick="alert('Opening AI Engine: Performance Analysis')" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md cursor-pointer transition space-y-2">
+                    <div class="text-2xl">📊</div>
+                    <h3 class="font-bold text-slate-900 text-base">1. performance analysis</h3>
+                    <p class="text-xs text-slate-500">Analyze overall academic performance metrics across curriculum tracks.</p>
+                </div>
+                <div onclick="alert('Opening AI Engine: At-Risk Student Detection')" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md cursor-pointer transition space-y-2">
+                    <div class="text-2xl">⚠️</div>
+                    <h3 class="font-bold text-slate-900 text-base">2. at-risk student detection</h3>
+                    <p class="text-xs text-slate-500">Identify students requiring immediate intervention or mentoring support.</p>
+                </div>
+                <div onclick="alert('Opening AI Engine: Weak Subject Identification')" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md cursor-pointer transition space-y-2">
+                    <div class="text-2xl">🔍</div>
+                    <h3 class="font-bold text-slate-900 text-base">3. weak subject identification</h3>
+                    <p class="text-xs text-slate-500">Spot foundational concepts and subjects with lower cohort success rates.</p>
+                </div>
+                <div onclick="alert('Opening AI Engine: Study Recommendations')" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md cursor-pointer transition space-y-2">
+                    <div class="text-2xl">💡</div>
+                    <h3 class="font-bold text-slate-900 text-base">4. study recommendations</h3>
+                    <p class="text-xs text-slate-500">Generate personalized study pathways and practice drills for learners.</p>
+                </div>
+                <div onclick="alert('Opening AI Engine: AI Insights & Reports')" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md cursor-pointer transition space-y-2">
+                    <div class="text-2xl">📈</div>
+                    <h3 class="font-bold text-slate-900 text-base">5. ai insights & reports</h3>
+                    <p class="text-xs text-slate-500">Comprehensive automated diagnostic reports generated by deep learning models.</p>
+                </div>
+            </div>
+        </div>
+
+        <main id="catalogMainContent" class="max-w-7xl mx-auto px-6 py-10 space-y-12">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl font-extrabold text-[#800000]">Explore All Engineering Programs</h2>
+                <p class="text-slate-600 text-sm max-w-xl mx-auto">Search through our wide range of engineering majors, filter by streams, or explore top-rated programs.</p>
+                
+                <div class="max-w-xl mx-auto pt-2">
+                    <input type="text" id="courseSearchInput" onkeyup="filterCourses()" placeholder="🔍 Search engineering courses (e.g., ECE, CSE, Bio, Mechanical)..." class="w-full px-5 py-3.5 rounded-2xl border border-slate-300 focus:outline-none focus:border-[#800000] shadow-sm bg-white text-sm">
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-2 pt-2">
+                    <button onclick="filterCategory('all')" id="cat-all" class="px-4 py-2 rounded-xl text-xs font-bold bg-[#800000] text-white transition shadow">All Programs</button>
+                    <button onclick="filterCategory('cse')" id="cat-cse" class="px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 transition">CSE & Tech</button>
+                    <button onclick="filterCategory('electronics')" id="cat-electronics" class="px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 transition">Electronics (ECE)</button>
+                    <button onclick="filterCategory('bio')" id="cat-bio" class="px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 transition">Bio & Medical</button>
+                    <button onclick="filterCategory('core')" id="cat-core" class="px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 transition">Core Engineering</button>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-6 border-b pb-2">Available Engineering Courses</h3>
+                <div id="coursesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="course-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg cursor-pointer transition transform hover:-translate-y-1" data-category="cse" data-name="computer science engineering cse" onclick="openFullCourseModal('Computer Science and Engineering (CSE)', 'cse', 'Dr. R. Ananthan')">
+                        <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="p-5">
+                            <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">CSE & Tech</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-2">Computer Science & Engineering</h4>
+                            <p class="text-xs text-slate-500 mt-1">Software systems, algorithms, cloud computing, and full-stack development.</p>
+                        </div>
+                    </div>
+                    <div class="course-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg cursor-pointer transition transform hover:-translate-y-1" data-category="electronics" data-name="electronics and communication engineering ece" onclick="openFullCourseModal('Electronics and Communication Engineering (ECE)', 'electronics', 'Dr. S. Kanimozhi')">
+                        <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="p-5">
+                            <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">Electronics (ECE)</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-2">Electronics & Communication (ECE)</h4>
+                            <p class="text-xs text-slate-500 mt-1">VLSI chip design, embedded IoT networks, and wireless telecommunications.</p>
+                        </div>
+                    </div>
+                    <div class="course-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg cursor-pointer transition transform hover:-translate-y-1" data-category="cse" data-name="artificial intelligence and data science ai ds" onclick="openFullCourseModal('Artificial Intelligence & Data Science', 'cse', 'Dr. A. Sundaram')">
+                        <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="p-5">
+                            <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">CSE & Tech</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-2">Artificial Intelligence & Data Science</h4>
+                            <p class="text-xs text-slate-500 mt-1">Advanced machine learning models, big data analytics, and predictive data systems.</p>
+                        </div>
+                    </div>
+                    <div class="course-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg cursor-pointer transition transform hover:-translate-y-1" data-category="cse" data-name="cyber security" onclick="openFullCourseModal('Cyber Security', 'cse', 'Dr. P. Karthikeyan')">
+                        <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="p-5">
+                            <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">CSE & Tech</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-2">Cyber Security</h4>
+                            <p class="text-xs text-slate-500 mt-1">Ethical hacking, cryptography, network threat defense, and cyber forensics.</p>
+                        </div>
+                    </div>
+                    <div class="course-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg cursor-pointer transition transform hover:-translate-y-1" data-category="bio" data-name="biomedical engineering" onclick="openFullCourseModal('Biomedical Engineering', 'bio', 'Dr. M. Priyadarshini')">
+                        <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="p-5">
+                            <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">Bio & Medical</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-2">Biomedical Engineering</h4>
+                            <p class="text-xs text-slate-500 mt-1">Medical imaging equipment design, bio-sensors, and clinical instrumentation.</p>
+                        </div>
+                    </div>
+                    <div class="course-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg cursor-pointer transition transform hover:-translate-y-1" data-category="core" data-name="mechanical engineering" onclick="openFullCourseModal('Mechanical Engineering', 'core', 'Dr. K. Vijayakumar')">
+                        <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1537462715879-363eab617291?auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="p-5">
+                            <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">Core Engineering</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-2">Mechanical Engineering</h4>
+                            <p class="text-xs text-slate-500 mt-1">Thermal systems, CAD/CAM design, robotics manufacturing, and mechanics.</p>
+                        </div>
+                    </div>
+                    <div class="course-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg cursor-pointer transition transform hover:-translate-y-1" data-category="electronics" data-name="electrical and electronics engineering eee ece" onclick="openFullCourseModal('Electrical & Electronics Engineering (EEE)', 'electronics', 'Dr. S. Ramesh')">
+                        <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="p-5">
+                            <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">Electronics (ECE)</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-2">Electrical & Electronics (EEE)</h4>
+                            <p class="text-xs text-slate-500 mt-1">Power systems, renewable energy grids, electrical machines, and smart drives.</p>
+                        </div>
+                    </div>
+                    <div class="course-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg cursor-pointer transition transform hover:-translate-y-1" data-category="bio" data-name="biotechnology" onclick="openFullCourseModal('Biotechnology', 'bio', 'Dr. V. Selvam')">
+                        <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=500&q=80')"></div>
+                        <div class="p-5">
+                            <span class="text-xs bg-red-50 text-[#800000] font-bold px-2 py-0.5 rounded">Bio & Medical</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-2">Biotechnology</h4>
+                            <p class="text-xs text-slate-500 mt-1">Genetic engineering, molecular biology, bioinformatics, and enzyme kinetics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ================= FULL COURSE DETAILS MODAL ================= -->
+    <div id="fullCourseModal" class="fixed inset-0 bg-black/60 hidden flex justify-center items-center z-50 p-4 overflow-y-auto">
+        <div class="bg-white w-full max-w-2xl p-8 rounded-3xl shadow-2xl relative my-8 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeFullCourseModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-2xl font-bold">×</button>
+            <span class="text-xs bg-red-100 text-[#800000] font-semibold px-3 py-1 rounded-full">Complete Course Prospectus</span>
+            
+            <h3 id="fcTitle" class="text-2xl font-extrabold text-[#800000] mt-3 mb-2">Course Title</h3>
+            <p id="fcInfo" class="text-sm text-slate-700 mb-6 leading-relaxed bg-slate-50 p-4 rounded-2xl border border-slate-200">Course info goes here...</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-sm">
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                    <p class="font-bold text-[#800000] mb-1">⏱️ Duration</p>
+                    <p class="text-slate-800 font-medium">4 Years (8 Semesters Full-Time)</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                    <p class="font-bold text-[#800000] mb-1">👨‍🏫 Best Assigned Faculty</p>
+                    <p id="fcFaculty" class="text-slate-800 font-medium">Faculty Name</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 mb-6 text-sm">
+                <p class="font-bold text-[#800000] mb-1">📅 Class & Lab Schedule</p>
+                <p class="text-slate-700">Theory Lectures: Monday to Friday (9:00 AM - 1:00 PM)<br>Practical Lab Sessions: Monday to Thursday (2:00 PM - 4:30 PM)<br>Guest Lectures & Industrial Workshops: Every Friday Afternoon.</p>
+            </div>
+
+            <div class="mb-8">
+                <p class="font-bold text-[#800000] mb-3 text-sm">📚 Comprehensive 12-Subject Curriculum Syllabus:</p>
+                <div id="fcSyllabusList" class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs"></div>
+            </div>
+
+            <button onclick="enrollAndRedirectToAuth()" class="w-full bg-[#800000] text-white py-4 rounded-xl font-bold hover:bg-red-900 transition shadow-lg text-sm flex items-center justify-center space-x-2">
+                <span>📝 Enroll Now / Register in Portal →</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= CONTACT INFO / FAQ / SUPPORT MODAL ================= -->
+    <div id="contactModal" class="fixed inset-0 bg-black/60 hidden flex justify-center items-center z-50 p-4 overflow-y-auto">
+        <div class="bg-white w-full max-w-3xl p-8 rounded-3xl shadow-2xl relative my-8 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeContactModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-2xl font-bold">×</button>
+            <div class="text-center mb-6">
+                <span class="text-xs bg-red-100 text-[#800000] font-semibold px-3 py-1 rounded-full">Support & Inquiry Hub</span>
+                <h3 class="text-2xl font-extrabold text-[#800000] mt-2">Contact Info, FAQ & Helpdesk</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-sm">
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3">
+                    <h4 class="font-bold text-[#800000] text-base border-b pb-2">📍 Contact Info</h4>
+                    <p class="text-xs text-slate-700"><strong>Address:</strong> Alphax Institute of Technology, NH-544, Bypass Road, Coimbatore, Tamil Nadu - 641032</p>
+                    <p class="text-xs text-slate-700"><strong>Email:</strong> admissions@alphaxtech.edu / support@alphaxtech.edu</p>
+                    <p class="text-xs text-slate-700"><strong>Phone:</strong> +91 422 2987654 / +91 9843012345</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3">
+                    <h4 class="font-bold text-[#800000] text-base border-b pb-2">🛠️ Support Desk</h4>
+                    <p class="text-xs text-slate-700">Our student helpdesk and technical support team are available Monday through Saturday from 9:00 AM to 5:00 PM for portal assistance, fee queries, and guidance.</p>
+                    <button onclick="alert('Support ticket system opened. Our team will get back to you shortly.')" class="w-full bg-[#800000] text-white py-2 rounded-xl font-bold text-xs hover:bg-red-900 transition shadow">Raise a Support Ticket</button>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 mb-6 space-y-3">
+                <h4 class="font-bold text-[#800000] text-base border-b pb-2">❓ Frequently Asked Questions (FAQ)</h4>
+                <div class="space-y-2 text-xs text-slate-700">
+                    <details class="bg-white p-3 rounded-xl border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900">How do I access the student portal dashboard?</summary>
+                        <p class="mt-2 text-slate-600">Click on the 'Student / Staff / Admin Login' button at the top right, select 'Student Portal', and log in using your college assigned ID and password.</p>
+                    </details>
+                    <details class="bg-white p-3 rounded-xl border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900">What are the eligibility criteria for engineering admissions?</summary>
+                        <p class="mt-2 text-slate-600">Candidates must have passed 10+2 higher secondary examination with Physics, Mathematics, and Chemistry/Computer Science with a minimum aggregate of 50%.</p>
+                    </details>
+                    <details class="bg-white p-3 rounded-xl border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900">How can I download my semester fee receipts and ID card?</summary>
+                        <p class="mt-2 text-slate-600">Log into your respective portal account and navigate to the profile or finance section to instantly download verified digital copies.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3">
+                <h4 class="font-bold text-[#800000] text-base border-b pb-2">✉️ Quick Contact Form</h4>
+                <form onsubmit="handleContactSubmit(event)" class="space-y-3 text-xs">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <input type="text" required placeholder="Your Full Name" class="px-3 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#800000] bg-white">
+                        <input type="email" required placeholder="Your Email Address" class="px-3 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#800000] bg-white">
+                    </div>
+                    <textarea required rows="3" placeholder="Type your message or inquiry here..." class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-[#800000] bg-white"></textarea>
+                    <button type="submit" class="w-full bg-[#800000] text-white py-2.5 rounded-xl font-bold hover:bg-red-900 transition shadow">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= AUTHENTICATION & PORTAL SECTION ================= -->
+    <div id="authPage" class="fixed inset-0 bg-gradient-to-br from-slate-900 via-red-950 to-slate-900 z-50 hidden overflow-y-auto">
+        <header class="bg-[#800000]/90 backdrop-blur text-white shadow-md sticky top-0 z-50 border-b border-red-800">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white text-[#800000] font-black px-3 py-2 rounded-xl text-sm shadow border border-amber-400">AIT</div>
+                    <div>
+                        <h1 class="text-lg font-bold tracking-wider">Alphax Institute of Technology</h1>
+                        <p class="text-xs text-red-200">Secure Institute Authentication Portal</p>
+                    </div>
+                </div>
+                <button onclick="closeAuthPage()" class="bg-white text-[#800000] px-5 py-2 rounded-xl font-bold hover:bg-red-50 transition shadow">
+                    ← Back to Home
+                </button>
+            </div>
+        </header>
+
+        <main class="max-w-4xl mx-auto px-6 py-12">
+            <div id="authMenuBox" class="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-md p-8 rounded-3xl shadow-2xl border border-white/15 text-white text-center space-y-6">
+                <h2 class="text-3xl font-extrabold">Select Your Portal Role</h2>
+                <p class="text-slate-300 text-sm max-w-lg mx-auto">Please select your login profile to access department dashboards, attendance records, or administrative settings.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+                    <button onclick="selectRole('student')" class="bg-white/10 hover:bg-white/20 border border-white/20 p-6 rounded-2xl transition text-center space-y-2 group">
+                        <div class="text-3xl">🎓</div>
+                        <h3 class="font-bold text-lg group-hover:text-amber-300">Student Portal</h3>
+                        <p class="text-xs text-slate-300">View courses, marks & attendance</p>
+                    </button>
+                    <button onclick="selectRole('staff')" class="bg-white/10 hover:bg-white/20 border border-white/20 p-6 rounded-2xl transition text-center space-y-2 group">
+                        <div class="text-3xl">👨‍🏫</div>
+                        <h3 class="font-bold text-lg group-hover:text-amber-300">Staff Portal</h3>
+                        <p class="text-xs text-slate-300">Manage classes, grades & assignments</p>
+                    </button>
+                    <button onclick="selectRole('admin')" class="bg-white/10 hover:bg-white/20 border border-white/20 p-6 rounded-2xl transition text-center space-y-2 group">
+                        <div class="text-3xl">⚡</div>
+                        <h3 class="font-bold text-lg group-hover:text-amber-300">Admin Control</h3>
+                        <p class="text-xs text-slate-300">System settings & approvals</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Login Form Container (Dynamic) -->
+            <div id="loginFormContainer" class="hidden bg-white text-slate-900 p-8 rounded-3xl shadow-2xl max-w-md mx-auto space-y-6">
+                <div class="flex justify-between items-center border-b pb-4">
+                    <h3 id="loginFormTitle" class="text-xl font-bold text-[#800000]">Login</h3>
+                    <button onclick="resetAuthMenu()" class="text-xs text-slate-500 hover:underline">← Change Role</button>
+                </div>
+                <form onsubmit="handleLoginSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Email / ID Number</label>
+                        <input type="text" id="loginUserId" required placeholder="Enter ID or Email" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-[#800000]">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
+                        <input type="password" id="loginPassword" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-[#800000]">
+                    </div>
+                    <button type="submit" class="w-full bg-[#800000] text-white py-3.5 rounded-xl font-bold hover:bg-red-900 transition shadow-md text-sm">
+                        Secure Login →
+                    </button>
+                </form>
+            </div>
+
+            <!-- Dashboards -->
+            <div id="studentDashboard" class="hidden bg-white text-slate-900 p-8 rounded-3xl shadow-2xl space-y-6">
+                <div class="flex justify-between items-center border-b pb-4">
+                    <div>
+                        <span class="text-xs bg-red-100 text-[#800000] font-bold px-2.5 py-1 rounded">Student Portal</span>
+                        <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Welcome, Student</h3>
+                    </div>
+                    <button onclick="resetAuthMenu()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg transition">Logout</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <p class="text-xs text-slate-500 font-semibold">Registered Courses</p>
+                        <p class="text-2xl font-extrabold text-[#800000] mt-1">6 Active</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <p class="text-xs text-slate-500 font-semibold">Attendance Percentage</p>
+                        <p class="text-2xl font-extrabold text-emerald-600 mt-1">94.5%</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <p class="text-xs text-slate-500 font-semibold">Semester CGPA</p>
+                        <p class="text-2xl font-extrabold text-amber-600 mt-1">8.82 / 10</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="staffDashboard" class="hidden bg-white text-slate-900 p-8 rounded-3xl shadow-2xl space-y-6">
+                <div class="flex justify-between items-center border-b pb-4">
+                    <div>
+                        <span class="text-xs bg-red-100 text-[#800000] font-bold px-2.5 py-1 rounded">Staff Faculty Portal</span>
+                        <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Faculty Control Panel</h3>
+                    </div>
+                    <button onclick="resetAuthMenu()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg transition">Logout</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-base mb-2">📋 Assigned Batches</h4>
+                        <p class="text-xs text-slate-600">B.Tech CSE Year III (Sec A) - 64 Students<br>B.Tech IT Year II (Sec B) - 58 Students</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-base mb-2">⚡ Quick Actions</h4>
+                        <button onclick="alert('Attendance portal opened.')" class="w-full bg-[#800000] text-white py-2.5 rounded-xl font-bold hover:bg-red-900 transition text-xs mb-2">Mark Today's Attendance</button>
+                        <button onclick="alert('Grade entry portal opened.')" class="w-full bg-slate-200 text-slate-800 py-2.5 rounded-semibold hover:bg-slate-300 transition text-xs">Upload Internal Marks</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="adminDashboard" class="hidden bg-white text-slate-900 p-8 rounded-3xl shadow-2xl space-y-6">
+                <div class="flex justify-between items-center border-b pb-4">
+                    <div>
+                        <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded">Administrator Console</span>
+                        <h3 class="text-2xl font-extrabold text-slate-900 mt-1">System Administration</h3>
+                    </div>
+                    <button onclick="resetAuthMenu()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg transition">Logout</button>
+                </div>
+
+                <!-- Admin Core Action Buttons Grid (Added 7 New Management Buttons) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <button onclick="alert('Opening Admin Module: Manage Students')" class="bg-slate-50 hover:bg-red-50 border border-slate-200 p-4 rounded-2xl text-left transition space-y-1 shadow-sm group">
+                        <span class="text-xs text-[#800000] font-bold">Module 01</span>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-[#800000]">1. manage students</h4>
+                        <p class="text-[11px] text-slate-500">Student enrollment, profiles & credentials</p>
+                    </button>
+                    <button onclick="alert('Opening Admin Module: Manage Teachers')" class="bg-slate-50 hover:bg-red-50 border border-slate-200 p-4 rounded-2xl text-left transition space-y-1 shadow-sm group">
+                        <span class="text-xs text-[#800000] font-bold">Module 02</span>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-[#800000]">2. manage teachers</h4>
+                        <p class="text-[11px] text-slate-500">Faculty allocations & department assignments</p>
+                    </button>
+                    <button onclick="alert('Opening Admin Module: Manage Courses & Catalogs')" class="bg-slate-50 hover:bg-red-50 border border-slate-200 p-4 rounded-2xl text-left transition space-y-1 shadow-sm group">
+                        <span class="text-xs text-[#800000] font-bold">Module 03</span>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-[#800000]">3. manage courses & catlogs</h4>
+                        <p class="text-[11px] text-slate-500">Syllabus structures & program listings</p>
+                    </button>
+                    <button onclick="alert('Opening Admin Module: Manage Assignments')" class="bg-slate-50 hover:bg-red-50 border border-slate-200 p-4 rounded-2xl text-left transition space-y-1 shadow-sm group">
+                        <span class="text-xs text-[#800000] font-bold">Module 04</span>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-[#800000]">4. manage assignments</h4>
+                        <p class="text-[11px] text-slate-500">Submission workflows & deadlines</p>
+                    </button>
+                    <button onclick="alert('Opening Admin Module: Manage Exams & Grades')" class="bg-slate-50 hover:bg-red-50 border border-slate-200 p-4 rounded-2xl text-left transition space-y-1 shadow-sm group">
+                        <span class="text-xs text-[#800000] font-bold">Module 05</span>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-[#800000]">5. manage exams & grades</h4>
+                        <p class="text-[11px] text-slate-500">Semester schedules & GPA calculations</p>
+                    </button>
+                    <button onclick="alert('Opening Admin Module: View Reports & Analysis')" class="bg-slate-50 hover:bg-red-50 border border-slate-200 p-4 rounded-2xl text-left transition space-y-1 shadow-sm group">
+                        <span class="text-xs text-[#800000] font-bold">Module 06</span>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-[#800000]">6. view reports & analysis</h4>
+                        <p class="text-[11px] text-slate-500">Academic progress & institutional metrics</p>
+                    </button>
+                    <button onclick="alert('Opening Admin Module: AI Insights & Monitoring')" class="bg-gradient-to-br from-purple-900 to-indigo-900 text-white border border-purple-800 p-4 rounded-2xl text-left transition space-y-1 shadow group">
+                        <span class="text-xs text-purple-200 font-bold">Module 07</span>
+                        <h4 class="font-bold text-white text-sm">7. ai insights & monitoring</h4>
+                        <p class="text-[11px] text-purple-200">Deep learning predictions & analytics</p>
+                    </button>
+                    <div onclick="toggleAdminReports()" class="bg-gradient-to-br from-red-900 to-[#800000] text-white p-4 rounded-2xl shadow cursor-pointer hover:opacity-95 transition flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs bg-amber-400 text-slate-900 font-bold px-2 py-0.5 rounded">Legacy Panel</span>
+                            <h4 class="font-bold text-sm mt-1">Reports & Insights</h4>
+                        </div>
+                        <p class="text-[11px] text-red-200 mt-2">Click to expand menu →</p>
+                    </div>
+                </div>
+
+                <!-- Admin Reports & Insights Expanded Menu -->
+                <div id="adminReportsContainer" class="hidden bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-6">
+                    <div class="flex justify-between items-center border-b pb-3">
+                        <h4 class="font-extrabold text-[#800000] text-lg">📊 Admin Reports & Insights Control Panel</h4>
+                        <button onclick="toggleAdminReports()" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 px-3 py-1.5 rounded-lg font-semibold">Close Panel</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Attendance Group -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <h5 class="font-bold text-slate-900 text-base border-b pb-2 flex items-center justify-between">
+                                <span>📅 Attendance</span>
+                            </h5>
+                            <div class="space-y-2">
+                                <button onclick="alert('Opening Admin: Mark Attendance')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">1. mark attendance</button>
+                                <button onclick="alert('Opening Admin: View Attendance')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">2. view attendance</button>
+                                <button onclick="alert('Opening Admin: Attendance Summary')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">3. attendance summary</button>
+                            </div>
+                        </div>
+
+                        <!-- Assignments Group -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <h5 class="font-bold text-slate-900 text-base border-b pb-2 flex items-center justify-between">
+                                <span>📝 Assignments</span>
+                            </h5>
+                            <div class="space-y-2">
+                                <button onclick="alert('Opening Admin: Create/View Assignments')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">1. create/view</button>
+                                <button onclick="alert('Opening Admin: Submit Assignments')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">2. submit assignments</button>
+                                <button onclick="alert('Opening Admin: Assignment Due Dates')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">3. due dates</button>
+                                <button onclick="alert('Opening Admin: Assignment AI Feedback')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">4. ai feedback</button>
+                            </div>
+                        </div>
+
+                        <!-- Exams & Grades Group -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <h5 class="font-bold text-slate-900 text-base border-b pb-2 flex items-center justify-between">
+                                <span>🏆 Exams & Grades</span>
+                            </h5>
+                            <div class="space-y-2">
+                                <button onclick="alert('Opening Admin: Take Exams')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">1. take exams</button>
+                                <button onclick="alert('Opening Admin: View Grades')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">2. view grades</button>
+                                <button onclick="alert('Opening Admin: Grade History')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">3. grade history</button>
+                                <button onclick="alert('Opening Admin: Exam Analysis')" class="w-full text-left bg-slate-50 hover:bg-red-50 hover:text-[#800000] px-3 py-2 rounded-xl text-xs font-semibold transition border border-slate-100">4. exam analysis</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        let currentSelectedRole = 'student';
+
+        function openCatalogPage() {
+            document.getElementById('catalogPage').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            backToCatalogMain();
+        }
+
+        function closeCatalogPage() {
+            document.getElementById('catalogPage').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openContactModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for contacting Alphax Institute. Your message has been sent successfully!');
+            closeContactModal();
+        }
+
+        function openCatalogAIEngine() {
+            document.getElementById('catalogMainContent').classList.add('hidden');
+            document.getElementById('catalogAIEngineSection').classList.remove('hidden');
+        }
+
+        function backToCatalogMain() {
+            document.getElementById('catalogAIEngineSection').classList.add('hidden');
+            document.getElementById('catalogMainContent').classList.remove('hidden');
+        }
+
+        function openAuthPage() {
+            document.getElementById('authPage').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            resetAuthMenu();
+        }
+
+        function closeAuthPage() {
+            document.getElementById('authPage').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function selectRole(role) {
+            currentSelectedRole = role;
+            document.getElementById('authMenuBox').classList.add('hidden');
+            document.getElementById('loginFormContainer').classList.remove('hidden');
+            const titleMap = { student: 'Student Portal Login', staff: 'Staff Faculty Login', admin: 'Administrator Login' };
+            document.getElementById('loginFormTitle').innerText = titleMap[role];
+        }
+
+        function resetAuthMenu() {
+            document.getElementById('authMenuBox').classList.remove('hidden');
+            document.getElementById('loginFormContainer').classList.add('hidden');
+            document.getElementById('studentDashboard').classList.add('hidden');
+            document.getElementById('staffDashboard').classList.add('hidden');
+            document.getElementById('adminDashboard').classList.add('hidden');
+            document.getElementById('adminReportsContainer').classList.add('hidden');
+        }
+
+        function toggleAdminReports() {
+            const container = document.getElementById('adminReportsContainer');
+            container.classList.toggle('hidden');
+        }
+
+        function handleLoginSubmit(event) {
+            event.preventDefault();
+            document.getElementById('loginFormContainer').classList.add('hidden');
+            if (currentSelectedRole === 'student') {
+                document.getElementById('studentDashboard').classList.remove('hidden');
+            } else if (currentSelectedRole === 'staff') {
+                document.getElementById('staffDashboard').classList.remove('hidden');
+            } else if (currentSelectedRole === 'admin') {
+                document.getElementById('adminDashboard').classList.remove('hidden');
+            }
+        }
+
+        function filterCategory(category) {
+            ['all', 'cse', 'electronics', 'bio', 'core'].forEach(cat => {
+                const btn = document.getElementById('cat-' + cat);
+                if (btn) {
+                    if (cat === category) {
+                        btn.className = "px-4 py-2 rounded-xl text-xs font-bold bg-[#800000] text-white transition shadow";
+                    } else {
+                        btn.className = "px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 transition";
+                    }
+                }
+            });
+
+            const cards = document.querySelectorAll('.course-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function filterCourses() {
+            const query = document.getElementById('courseSearchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.course-card');
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name');
+                if (name.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        const sampleSyllabus = [
+            "1. Engineering Mathematics & Calculus",
+            "2. Engineering Physics & Materials Science",
+            "3. Problem Solving & Advanced Programming",
+            "4. Data Structures & Algorithm Design",
+            "5. Object-Oriented Software Engineering",
+            "6. Database Management Systems & SQL",
+            "7. Computer Networks & Security Protocols",
+            "8. Operating Systems & Cloud Architecture",
+            "9. Artificial Intelligence & Machine Learning",
+            "10. Internet of Things (IoT) & Embedded Systems",
+            "11. Professional Ethics & Industrial Management",
+            "12. Comprehensive Capstone Major Project"
+        ];
+
+        function openFullCourseModal(title, category, faculty) {
+            document.getElementById('fcTitle').innerText = title;
+            document.getElementById('fcInfo').innerText = `Comprehensive 4-year curriculum designed for ${title} at Alphax Institute of Technology. Prepares students for global careers and high-tech industry roles through rigorous practical training.`;
+            document.getElementById('fcFaculty').innerText = faculty;
+
+            const syllabusContainer = document.getElementById('fcSyllabusList');
+            syllabusContainer.innerHTML = '';
+            sampleSyllabus.forEach(item => {
+                const div = document.createElement('div');
+                div.className = "bg-white p-2.5 rounded-xl border border-slate-200 text-slate-700 font-medium";
+                div.innerText = item;
+                syllabusContainer.appendChild(div);
+            });
+
+            document.getElementById('fullCourseModal').classList.remove('hidden');
+        }
+
+        function closeFullCourseModal() {
+            document.getElementById('fullCourseModal').classList.add('hidden');
+        }
+
+        function enrollAndRedirectToAuth() {
+            closeFullCourseModal();
+            closeCatalogPage();
+            openAuthPage();
+            selectRole('student');
+        }
+    </script>
+</body>
+</html>
